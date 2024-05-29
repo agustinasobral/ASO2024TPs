@@ -13,7 +13,7 @@ RTA: Al comparar los tiempo de ejecucion con mi compañero, observamos que en el
 C)Ejecutar el archivo suma_rasta.py unas 10 veces, luego descomentar (borrar el #) las líneas 11,12,19 y 20 guardarlo y ejecutarlo otras 10 veces. 
 ¿Qué pasó? ¿Por qué?
 
-RTA:Lo que pasa al descomentar el código y hacer que ambos hilos comiencen a ciclar dentro del rango especificado es que, en cierto punto se provocara una race condition, esto ocurre ya que cuando los dos hilos, en este caso, sumador y restador utilizan una misma variable global llamada acumulador, esta, se convierte en una región de zona critica entre ambos hilos. En el rango mostrado en el código, el resultado de estos hilos al ejecutarse es 0, pero tal vez, al ejecutarse mas veces, es posible que ocurra una race condition, lo que haría que el resultado varíe; las race conditions ocurren cuando dos hilos están utilizando un recurso compartido sin ningún tipo de control. En este código por mas que este comentado o no, la race condition ocurre igual.
+RTA: Lo que pasa al descomentar el codigo y ejecutarlo es que, los hilos sumador y restador al compartir una misma variable global y comenzar a ciclar al mismo momento, entran en una zona critica, y puede producirse una race condition, estas suceden cuando dos hilos estan utilizando un mismo recurso compartido sin ningun tipo de control. En este codigo en especifico, la race condition es inevitable, por mas que el codigo este comentado o no.
 
 
 EJERCICIO 2)
