@@ -7,13 +7,13 @@ RTA: El tiempo de ejecucion de los codigos no es predecible ya que estos varian 
 
 B) Comparar con un campañero el tiempo de ejecución. ¿Son iguales?
 
-RTA: Al comparar los tiempo de ejecucion con mi compañero, observamos que en el codigo conhilos, tuvimos el mismo tiempo de ejecucion, que va de 4.01 a 4.03 segundos, mientras que en el codigo sinhilos, los tiempos de ejecucion fueron levemente diferentes, los mios promediando de los 5.14 a 5.24 segundos, y los de el de 5.41 a 5.43 segundos.
+RTA: Al comparar los tiempo de ejecucion con mi compañero, observamos que en el codigo conhilos, tuvimos el mismo tiempo de ejecucion, que va de 4.01 a 4.03 segundos, mientras que en el codigo sinhilos, los tiempos de ejecucion fueron levemente diferentes, los mios promediando de los 5.14 a 5.24 segundos, y los de el de 5.41 a 5.43 segundos. Los resultados del tiempo de ejecución varia dependiendo de cada computadora, al igual que si se tiene una aplicacion abierta al momento de ejutarlo o no.
 
 
 C)Ejecutar el archivo suma_rasta.py unas 10 veces, luego descomentar (borrar el #) las líneas 11,12,19 y 20 guardarlo y ejecutarlo otras 10 veces. 
 ¿Qué pasó? ¿Por qué?
 
-RTA: Al descomentar el codigo, a este se le agregan lineas con instrucciones que en este caso, hacen recorren un cierto rango de numeros, produciendo que el tiempo de ejecucion del codigo se incremente. Las primeras 10 ejecuciones del codigo comentado, tuvieron un promedio de 0.14 a 0.30 segundos, mientras que en las 10 ejecuciones del codigo sin comentar el promedio fue de 2.76 a 3.50 segundos.
+RTA:Lo que pasa al des-comentar el código y hacer que ambos hilos comiencen a ciclar dentro del rango especificado es que, en cierto punto se provocara una race condition, esto ocurre ya que cuando los dos hilos , en este caso, sumador y restador utilizan una misma variable global llamada acumulador, esta, se convierte en una región de zona critica entre ambos hilos. En el rango mostrado en el código, el resultado de estos hilos al ejecutarse es 0, pero tal vez, al ejecutarse mas veces, es posible que ocurra una race condition, lo que haría que el resultado varíe; las race conditions ocurren cuando dos hilos están utilizando un recurso compartido sin ningún tipo de control. En este código por mas que este comentado o no, la race condition ocurre igual.
 
 
 EJERCICIO 2)
