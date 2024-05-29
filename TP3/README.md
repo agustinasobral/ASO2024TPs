@@ -18,7 +18,8 @@ RTA:Lo que pasa al des-comentar el código y hacer que ambos hilos comiencen a c
 
 EJERCICIO 2)
 
-A) [codigocompleto.txt](https://github.com/agustinasobral/ASO2024TPs/files/15315156/codigocompleto.txt)
+A) [codigo.funcional.txt](https://github.com/agustinasobral/ASO2024TPs/files/15478530/codigo.funcional.txt)
+
 
 
 B) ![DiagramaHamburguesas](https://github.com/agustinasobral/ASO2024TPs/assets/167656580/259217cb-209c-4a70-93e9-51557d766f6c)
