@@ -11,11 +11,6 @@ while true; do
 
     read -p "Intenta adivinar el numero. Pista: El numero esta entre el 1 y el 100: " intento
 
-    if ! [[ "$intento" =~ ^[0-9]+$ ]]; then
-        echo "Ingresa un numero entre 1 y 100."
-        continue
-    fi
-
     if [ "$intento" -lt "$numero_aleatorio" ]; then
         echo "El numero es demasiado bajo. Intenta nuevamente."
     elif [ "$intento" -gt "$numero_aleatorio" ]; then
